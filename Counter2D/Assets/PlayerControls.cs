@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class PlayerControls : MonoBehaviour
 {
     [SerializeField] Text ActionText;
+    [SerializeField] Text ButtonText;
     [SerializeField] Text Score;
     [SerializeField] string scoreText;
+    [SerializeField] InteractiveElement up, down, left, right;
     private float scoreNumber;
     private void Start()
     {
@@ -16,7 +18,23 @@ public class PlayerControls : MonoBehaviour
     }
     void Update()
     {
-        
+        ButtonText.text = "IDLE";
+        if (up.isPressed)
+        {
+            ButtonText.text = "UP";
+        }
+        if (down.isPressed)
+        {
+            ButtonText.text = "DOWN";
+        }
+        if (left.isPressed)
+        {
+            ButtonText.text = "LEFT";
+        }
+        if (right.isPressed)
+        {
+            ButtonText.text = "RIGHT";
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
