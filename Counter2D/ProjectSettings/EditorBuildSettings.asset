@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: e43906cb16970cd4e9fad5c473d9e3dd
   - enabled: 1
     path: Assets/Scenes/FistOfFury.unity
     guid: 0594da5659c80af4b86898f00c6360e5
