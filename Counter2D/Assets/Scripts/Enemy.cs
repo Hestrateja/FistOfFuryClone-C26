@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float speed;
-    private byte direction;
+    public byte direction;
     private Vector2 movement;
     // Start is called before the first frame update
     void Start()
@@ -42,6 +42,11 @@ public class Enemy : MonoBehaviour
         {
             return 4;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        movement = Vector2.zero;
     }
 
     private void Move(byte direction)
